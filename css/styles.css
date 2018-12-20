@@ -1,0 +1,191 @@
+/* General Configuration */
+
+* {
+    margin: 0;
+    padding: 0;
+    box sizing: border-box;
+    font-size: 20px;
+    font-family: 'Segoe UI', Arial;
+}
+
+body {
+    background: #2d394c;
+}
+
+main,
+header {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* Header Configuration */
+
+header .logo {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+
+/* Main Configuration */
+
+main {
+    margin: 20px auto;
+}
+
+
+/* Add Comment Styles */
+
+main .add-comment .container {
+    width: 100%;
+    display: flex;
+    border-bottom: 3px solid #707070;
+    padding: 5px 0;
+}
+
+.add-comment #text-to-add {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 0.8em;
+    outline: none;
+}
+
+.add-comment #text-to-add::-webkit-input-placeholder {
+    font-size: 1em;
+    color: #fff;
+}
+
+.add-comment #text-to-add::-moz-placeholder {
+    font-size: 1em;
+    color: #fff;
+}
+
+.add-comment .add-btn {
+    border: none;
+    width: 100px;
+    height: 100%;
+    background: #97CA3F;
+    color: #fff;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    padding: 10px 0;
+}
+
+
+/* Notes Container Styles */
+
+.notes-container {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.notes-container .note {
+    /* width: 100%; */
+    border: 1px solid #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.note:hover {
+    border: 1px solid #38A1F3;
+}
+
+.notes-container .note .checkbox-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.checkbox-btn i {
+    font-size: 0;
+    transition: all .3s ease;
+}
+
+.checkbox-btn:hover i {
+    font-size: 0.7em;
+}
+
+.note .checkbox-btn:hover {
+    background: #97CA3F;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.note .text-content {
+    font-size: 0.8em;
+    color: #fff;
+    margin-left: 15px;
+    width: 90%;
+}
+
+.delete-btn {
+    color: #fff;
+    justify-self: flex-end;
+    transition: all .2s ease;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+
+/* Completed Note Styles */
+
+.completed-notes {
+    width: 100%;
+}
+
+.completed-notes .container {
+    margin: 30px auto;
+}
+
+.completed-notes .section-title {
+    font-size: 1.4em;
+    border-bottom: 3px solid #97CA3F;
+    padding: 5px;
+    color: #97CA3F;
+}
+
+.completed-notes .completed-note {
+    border: 1px solid #97CA3F;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.completed-notes .completed-note .text-content {
+    width: 94%;
+    margin-left: 15px;
+    font-size: 0.8em;
+    color: #97CA3F;
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 600px) {
+    main,
+    header {
+        width: 96%;
+        margin: 10px;
+    }
+}
