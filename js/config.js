@@ -3,6 +3,7 @@ const addComment = document.getElementById('add-comment');
 const contentToAdd = document.getElementById('text-to-add');
 const notesContainer = document.getElementById('notes-container');
 const completeNotes = document.getElementById('completed-notes').children[1];
+const error = document.getElementById('error');
 
 EventListeners();
 
@@ -17,22 +18,32 @@ function EventListeners() {
 
 function AddNote(e) {
     if (e.target.className == 'add-btn' || e.target.className == 'fas fa-plus') {
+        if (contentToAdd.value == "") {
+            error.style.display = "block";
 
-        let note = `
-          <div class="note">
-          <div class="checkbox-btn" id="checkbox-btn"><i class="fas fa-check"></i></div>
+            setTimeout(() => {
+                error.style.display = "none";
+            }, 2000);
+        } else {
+
+
+            let note = `
+               <div class="note">
+               <div class="checkbox-btn" id="checkbox-btn"><i class="fas fa-check"></i></div>
           <span class="text-content">${contentToAdd.value}</span>
           <div class="delete-btn" id="delete-btn"><i class="fas fa-trash-alt"></i></div>
           </div>
           `;
 
-        AddToLocalStorage(contentToAdd.value);
+            AddToLocalStorage(contentToAdd.value);
 
-        notesContainer.innerHTML = note + notesContainer.innerHTML;
+            notesContainer.innerHTML = note + notesContainer.innerHTML;
 
-        contentToAdd.value = "";
+            contentToAdd.value = "";
+        }
     }
 }
+
 
 function RemoveNote(e) {
     if (e.target.className == 'fas fa-trash-alt') {

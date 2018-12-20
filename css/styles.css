@@ -83,6 +83,16 @@ main .add-comment .container {
 
 /* Notes Container Styles */
 
+.error {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #fff;
+    background: red;
+    display: none;
+}
+
 .notes-container {
     width: 100%;
     margin: 30px auto;
