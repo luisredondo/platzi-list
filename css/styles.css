@@ -22,13 +22,12 @@ header {
 
 /* Header Configuration */
 
-header .logo {
+header .logo .main-title {
     width: 100%;
-    margin: 0 auto;
-}
-
-header .logo img {
-    width: 100%;
+    font-size: 4em;
+    color: #97CA3F;
+    text-align: center;
+    line-height: 70px;
 }
 
 

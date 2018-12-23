@@ -12,12 +12,17 @@ function EventListeners() {
     document.addEventListener('click', RemoveNote);
     document.addEventListener('DOMContentLoaded', LoadElementsLocalStorage);
     addComment.addEventListener('click', AddNote);
+    addComment.addEventListener('keydown', (e) => {
+        if (e.keyCode == 13) {
+            AddNote(e, true);
+        }
+    });
     notesContainer.addEventListener('click', AddToCompletes)
 
 };
 
-function AddNote(e) {
-    if (e.target.className == 'add-btn' || e.target.className == 'fas fa-plus') {
+function AddNote(e, estado) {
+    if (e.target.className == 'add-btn' || e.target.className == 'fas fa-plus' || estado == true) {
         if (contentToAdd.value == "") {
             error.style.display = "block";
 
